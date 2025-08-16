@@ -1,0 +1,17 @@
+# data / outputs
+input/
+working/
+submissions/
+submissions/*.csv
+models/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

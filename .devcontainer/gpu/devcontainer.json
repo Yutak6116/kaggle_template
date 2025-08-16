@@ -1,0 +1,20 @@
+{
+  "name": "kaggle-notebook-gpu",
+  "build": { "dockerfile": "Dockerfile", "context": "." },
+  "runArgs": ["--gpus", "all"],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+    "source=/home/your_windows_user/.kaggle,target=/root/.kaggle,type=bind,readonly"
+  ],
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "python3 -m ipykernel install --user --name kaggle-notebook-gpu"
+}
