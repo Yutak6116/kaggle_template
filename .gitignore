@@ -1,7 +1,6 @@
 # data / outputs
 input/
 working/
-submissions/
 submissions/*.csv
 models/
 
